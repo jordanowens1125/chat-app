@@ -7,8 +7,8 @@ import { options } from "./api/auth/[...nextauth]/options";
 
 
 export default function Home() {
-  const  session = getServerSession(options);
-  
+  //const  session = getServerSession(options);
+  const revalidate = 0
 
   return (
     <main className={styles.main}>
