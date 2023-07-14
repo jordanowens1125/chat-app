@@ -7,7 +7,7 @@ const Message = ({ userComment = false }: Boolean) => {
     //   <h5>{comment.creator.email}</h5>
     //   <div className="messageText">{comment.text}</div>
     // </div>
-    <div className={userComment ? "message  own" : "message"}>
+    <div className={userComment ? "message own" : "message"}>
       {/* <Image
         alt="idk"
         src={
