@@ -1,4 +1,5 @@
 "use client";
+import { getServerSession } from "next-auth";
 import styles from "../page.module.css";
 import ChatOption from "./chatOption";
 import Message from "./message";
@@ -7,6 +8,7 @@ import io from "Socket.IO-client";
 let socket;
 
 const Page = () => {
+  
   // useEffect(() => {
   //   const socketInitializer = async () => {
   //     await fetch('/api/socket')
@@ -36,7 +38,7 @@ const Page = () => {
     <main>
       <section className="chat-page">
         <div className="chat-selection-sidebar">
-          <p className="chat-selection-heading">Chats</p>
+          <p className="chat-selection-heading theme-text">Chats</p>
           <div className="chat-selection-options">
             <ChatOption />
             <ChatOption />

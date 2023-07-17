@@ -2,11 +2,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useSession, signIn, signOut } from "next-auth/react";
-// import { getServerSession } from "next-auth";
+import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/options";
 
 export default function Home() {
-  //const  session = getServerSession(options);
+  const session = getServerSession(options);
+
+  console.log(session);
+
   const revalidate = 0;
 
   return (

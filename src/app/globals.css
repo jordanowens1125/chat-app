@@ -73,7 +73,7 @@ a {
   width: 100%;
 }
 
-.chat-page img{
+.chat-page img {
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -86,17 +86,17 @@ a {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  border-right: green 1px solid;
-  border-left: green 1px solid;
+  border-right: aquamarine 1px solid;
+  border-left: aquamarine 1px solid;
   overflow-y: auto;
 }
 
 .chat-selection-heading {
   padding: 10px 5px;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid aquamarine;
 }
 
-.chat-selection-options{
+.chat-selection-options {
   overflow-y: auto;
 }
 
@@ -106,11 +106,11 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border-top: 1px solid green;
+  border-top: 1px solid aquamarine;
 }
 
-.chat-selection-options:last-child{
-  border-bottom: 1px solid green;
+.chat-selection-options:last-child {
+  border-bottom: 1px solid aquamarine;
 }
 
 .chat {
@@ -120,7 +120,7 @@ a {
   flex-direction: column;
   overflow-y: auto;
   gap: 5px;
-  border-right: green 1px solid;
+  border-right: aquamarine 1px solid;
 }
 
 .chat-heading {
@@ -128,7 +128,7 @@ a {
   width: 100%;
   justify-content: space-between;
   padding: 10px 5px;
-  border-bottom: 1px green solid;
+  border-bottom: 1px aquamarine solid;
 }
 
 .new-message {
@@ -137,7 +137,7 @@ a {
   align-items: center;
   width: 100%;
   gap: 5px;
-  border: 1px green solid;
+  border: 1px aquamarine solid;
 }
 
 .chat-input {
@@ -180,7 +180,8 @@ a {
 .messageText {
   padding: 6px;
   border-radius: 12px;
-  background-color: pink;
+  background: linear-gradient(30deg, aquamarine, mediumpurple);
+  color: #fff;
   overflow-wrap: break-word;
   max-width: 250px;
 }
@@ -196,8 +197,37 @@ a {
 }
 
 .message.own .messageText {
-  color: var(--font-color);
-  background-color: skyblue;
+  color: #fff;
+  background: linear-gradient(10deg, mediumpurple, aquamarine);
+}
+
+
+/*  */
+.theme-text {
+  color: #fff;
+  background: linear-gradient(30deg, aquamarine, mediumpurple);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8f54a0 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(30deg, aquamarine, mediumpurple);
+  border-radius: 5px;
+  border: 3px solid #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
