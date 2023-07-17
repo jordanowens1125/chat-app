@@ -4,23 +4,33 @@ import styles from "../page.module.css";
 import ChatOption from "./chatOption";
 import Message from "./message";
 import { useEffect } from "react";
-import io from "Socket.IO-client";
+import io from 'socket.io-client'
 let socket;
 
 const Page = () => {
   
-  // useEffect(() => {
-  //   const socketInitializer = async () => {
-  //     await fetch('/api/socket')
-  //     socket = io()
+//  useEffect(() => {
+//     fetch('/api/socket').finally(() => {
+//       const socket = io()
 
-  //     socket.on('connect', () => {
-  //       console.log('connected')
-  //     })
-  //   }
-  //   socketInitializer()
-  // },[]);
-  
+//       socket.on('connect', () => {
+//         console.log('connect')
+//         socket.emit('hello')
+//       })
+
+//       socket.on('hello', data => {
+//         console.log('hello', data)
+//       })
+
+//       socket.on('a user connected', () => {
+//         console.log('a user connected')
+//       })
+
+//       socket.on('disconnect', () => {
+//         console.log('disconnect')
+//       })
+//     })
+//   }, [])
 
   let lastSender = {};
   const goToBottom = () => {
